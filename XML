@@ -1,0 +1,125 @@
+1. Initialize a Git Repository:
+
+git init
+This creates a new Git repository in the current directory.
+
+2. Create a File:
+
+touch test.txt 
+This creates a new file named "test.txt" in the current directory.
+
+3. Add the File to Staging Area:
+
+git add test.txt
+This stages the "test.txt" file for the next commit.
+
+4. Commit the Changes:
+
+git commit -m "Initial commit"
+This creates a commit with the staged changes and a descriptive message.
+
+5. Check the Status:
+
+git status
+This shows the current state of the working directory and staging area.
+
+6. Create a New Branch:
+
+git branch new_branch
+This creates a new branch named "new_branch".
+
+7. Switch to the New Branch:
+
+git checkout new_branch
+This switches to the newly created "new_branch".
+
+8. Make Changes to the File:
+Edit the "test.txt" file.
+
+9. Stage and Commit Changes on the New Branch:
+
+git add test.txt
+git commit -m "Changes on new_branch"
+
+10. Switch Back to the Main Branch:
+
+git checkout main
+
+11. Merge the New Branch:
+
+git merge new_branch
+This merges the changes from the "new_branch" into the "main" branch.
+
+12. Check the Commit History:
+
+git log
+
+-------------------------------------------------------------------------------------
+
+FROM nginx:alpine
+COPY html /usr/share/nginx/html
+EXPOSE 80
+
+--------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<head>
+    <title>
+        First Doc
+    </title>
+<body>
+    <p>
+        Hello Welcome to lab program 5
+    </p>
+</body>
+</head>
+------------------------------------------------------------------------------------
+docker build -t my-nginx-image .
+docker images
+docker run -d -p 8080:80 my-nginx-image
+127.0.0.1:8080
+------------------------------------------------------------------------------------
+Check Docker Installation:
+
+docker --version
+This command displays the installed Docker version.
+
+2. List Images:
+
+docker images
+This command lists all the Docker images available on your system.
+
+3. Pull an Image:
+
+docker pull hello-world 
+This command downloads the official "hello-world" image from Docker Hub.
+
+4. Run a Container:
+
+docker run hello-world
+This command runs the "hello-world" image in a new container. You should see the "Hello from Docker!" message in the output.
+
+5. List Running Containers:
+
+docker ps 
+This command displays a list of currently running containers.
+
+6. List All Containers (Running and Stopped):
+
+docker ps -a
+This command displays a list of all containers, including those that are stopped.
+
+7. Stop a Running Container (if you have one running):
+
+docker stop <container_id> 
+Replace <container_id> with the actual ID of the running container (you can find it using docker ps).
+
+8. Remove a Stopped Container:
+
+docker rm <container_id>
+Replace <container_id> with the actual ID of the stopped container.
+
+9. Remove an Image:
+
+docker rmi <image_name>:<tag> 
+Replace <image_name>:<tag> with the name and tag of the image you want to remove (e.g., hello-world:latest).
+
