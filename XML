@@ -122,4 +122,5 @@ Replace <container_id> with the actual ID of the stopped container.
 
 docker rmi <image_name>:<tag> 
 Replace <image_name>:<tag> with the name and tag of the image you want to remove (e.g., hello-world:latest).
+----------------------------------------------------------------------------------------------
 
