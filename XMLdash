@@ -71,6 +71,13 @@ def test_add():
 ---------------------------------------------------------------------------
 commit changes
 
+mkdir actions-runner
+cd actions-runner
+curl -L -o <file-name.zip> <url>
+
+use config commands
+
+
 Show the build details
 
 **************************************************************************************************************************************
